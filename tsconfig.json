@@ -5,7 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "preserve",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "types": ["element-plus/global"]
   },
 
   "references": [

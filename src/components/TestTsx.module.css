@@ -1,0 +1,13 @@
+.baseFrame {
+  border: 10px solid purple;
+}
+.baseColor {
+  color: yellow;
+}
+/* ：global() 通常用来修改第三方组件库的样式 */
+:global(.el-button) {
+  color: aqua;
+}
+.child{
+  border: 1px solid red;
+}
