@@ -17,15 +17,22 @@ import styles from "./TestTsx.module.css";
 
 // 定义组件 Child
 const Child = defineComponent({
+  name: "child",
+  props: {
+    childrenName: {
+      type: String,
+      require: true,
+    },
+  },
   setup(props, { slots }) {
     return () => (
-      <>
-        默认插槽:{slots.default && slots.default()}
+      <div>
+        默认插槽:{slots.default?.()}
         <br />
         具名插槽:{slots.prefix && slots.prefix()}
         <br />
         作用域插槽:{slots.suffix && slots.suffix({ name: "suffix" })}
-      </>
+      </div>
     );
   },
 });
@@ -33,13 +40,16 @@ const Child = defineComponent({
 // defineComponent() setup composition API
 export default defineComponent({
   // 其他配置
+  name: "TestTsx",
   setup() {
+    // const url = document.querySelector('div');
     const counter = ref(0);
     const condition = ref(true);
     const list = ref<string[]>(["abc", "cba"]);
+    const modelValue = ref<string>("rua");
     // 返回 jsx
     return () => (
-      <>
+      <div>
         <div class={styles.baseFrame}>TestTsx</div>
         <input type="text" v-model={counter.value} />
         {/* v-if */}
@@ -52,7 +62,10 @@ export default defineComponent({
             </p>
           ))}
         </div>
-        {/* 插槽 v-slot */}
+        {/*
+          插槽 v-slot两种方法:
+          1. 标签内写
+        */}
         <Child
           v-slots={{
             prefix: () => <i class={styles.child}>prefix</i>,
@@ -64,8 +77,17 @@ export default defineComponent({
           默认插槽内容
         </Child>
         {/* 使用elementUIPlus组件 */}
-        <ElButton class={styles.ElButton}>点我点我</ElButton>
-      </>
+        <ElButton>点我点我</ElButton>
+        {/* v-model 正常写法 */}
+        <input type="text" v-model={modelValue.value} />
+        {/* 指定绑定值写法 */}
+        <input type="text" v-model={[modelValue.value, "modelValue"]} />
+        {/* 修饰符写法 */}
+        <input
+          type="text"
+          v-model={[modelValue.value, "modelValue", ["trim"]]}
+        />
+      </div>
     );
   },
 });
