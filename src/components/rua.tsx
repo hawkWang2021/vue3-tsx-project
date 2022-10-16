@@ -4,7 +4,7 @@ export default defineComponent({
   setup() {
     return () => (
       <div>
-        <span>rua!</span>
+        <span>rua!!!</span>
       </div>
     );
   },
