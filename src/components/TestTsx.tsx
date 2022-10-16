@@ -17,7 +17,7 @@ import styles from "./TestTsx.module.css";
 
 // 定义组件 Child
 const Child = defineComponent({
-  name: "child",
+  name: "childCom",
   props: {
     childrenName: {
       type: String,
