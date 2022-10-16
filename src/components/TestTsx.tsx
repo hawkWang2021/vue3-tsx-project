@@ -87,7 +87,7 @@ export default defineComponent({
           type="text"
           v-model={[modelValue.value, "modelValue", ["trim"]]}
         />
-        test
+        你好你好你好呀.
       </div>
     );
   },
