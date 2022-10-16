@@ -87,7 +87,7 @@ export default defineComponent({
           type="text"
           v-model={[modelValue.value, "modelValue", ["trim"]]}
         />
-        test
+        我不好我不好我不好
       </div>
     );
   },
