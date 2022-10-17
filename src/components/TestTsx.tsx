@@ -36,7 +36,20 @@ const Child = defineComponent({
     );
   },
 });
-
+// 父子传值 emit
+const son = defineComponent({
+  name: "sonCom",
+  emits: ["transValue"],
+  setup(props, { emit }) {
+    return () => (
+      <div>
+        <button onClick={() => emit("transValue", "emit 传值")}>
+          emit传值
+        </button>
+      </div>
+    );
+  },
+});
 // defineComponent() setup composition API
 export default defineComponent({
   // 其他配置
@@ -47,6 +60,7 @@ export default defineComponent({
     const condition = ref(true);
     const list = ref<string[]>(["abc", "cba"]);
     const modelValue = ref<string>("rua");
+    const logData = (value: string) => console.log(value);
     // 返回 jsx
     return () => (
       <div>
@@ -80,14 +94,18 @@ export default defineComponent({
         <ElButton>点我点我</ElButton>
         {/* v-model 正常写法 */}
         <input type="text" v-model={modelValue.value} />
-        {/* 指定绑定值写法 */}
+        {/* v-model 指定绑定值写法 */}
         <input type="text" v-model={[modelValue.value, "modelValue"]} />
-        {/* 修饰符写法 */}
+        {/* v-model 修饰符写法 */}
         <input
           type="text"
           v-model={[modelValue.value, "modelValue", ["trim"]]}
         />
-        我不好我不好我不好
+        {/* 学习父子传值的方法 */}
+        {/* 第一种方法 */}
+        <son onTransValue={logData}></son>
+        {/* 第二种方法 解构赋值 */}
+        <son {...{ onTransValue: logData }}></son>
       </div>
     );
   },
