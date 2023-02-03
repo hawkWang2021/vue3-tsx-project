@@ -441,10 +441,10 @@
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-16.11.62.tgz"
   "version" "16.11.62"
 
-"@types/web-bluetooth@^0.0.15":
-  "integrity" "sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA=="
-  "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz"
-  "version" "0.0.15"
+"@types/web-bluetooth@^0.0.16":
+  "integrity" "sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ=="
+  "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz"
+  "version" "0.0.16"
 
 "@typescript-eslint/eslint-plugin@^5.0.0":
   "integrity" "sha512-ky7EFzPhqz3XlhS7vPOoMDaQnQMn+9o5ICR9CPr/6bw8HrFkzhMSxuA3gRfiJVvs7geYrSeawGJjZoZQKCOglQ=="
@@ -728,25 +728,25 @@
   "resolved" "https://registry.npmmirror.com/@vue/tsconfig/-/tsconfig-0.1.3.tgz"
   "version" "0.1.3"
 
-"@vueuse/core@*", "@vueuse/core@^9.1.0":
-  "integrity" "sha512-64Rna8IQDWpdrJxgitDg7yv1yTp41ZmvV8zlLEylK4QQLWAhz1OFGZDPZ8bU4lwcGgbEJ2sGi2jrdNh4LttUSQ=="
-  "resolved" "https://registry.npmmirror.com/@vueuse/core/-/core-9.3.0.tgz"
-  "version" "9.3.0"
+"@vueuse/core@*", "@vueuse/core@^9.1.0", "@vueuse/core@^9.12.0":
+  "integrity" "sha512-h/Di8Bvf6xRcvS/PvUVheiMYYz3U0tH3X25YxONSaAUBa841ayMwxkuzx/DGUMCW/wHWzD8tRy2zYmOC36r4sg=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/core/-/core-9.12.0.tgz"
+  "version" "9.12.0"
   dependencies:
-    "@types/web-bluetooth" "^0.0.15"
-    "@vueuse/metadata" "9.3.0"
-    "@vueuse/shared" "9.3.0"
+    "@types/web-bluetooth" "^0.0.16"
+    "@vueuse/metadata" "9.12.0"
+    "@vueuse/shared" "9.12.0"
     "vue-demi" "*"
 
-"@vueuse/metadata@9.3.0":
-  "integrity" "sha512-GnnfjbzIPJIh9ngL9s9oGU1+Hx/h5/KFqTfJykzh/1xjaHkedV9g0MASpdmPZIP+ynNhKAcEfA6g5i8KXwtoMA=="
-  "resolved" "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.3.0.tgz"
-  "version" "9.3.0"
+"@vueuse/metadata@9.12.0":
+  "integrity" "sha512-9oJ9MM9lFLlmvxXUqsR1wLt1uF7EVbP5iYaHJYqk+G2PbMjY6EXvZeTjbdO89HgoF5cI6z49o2zT/jD9SVoNpQ=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.12.0.tgz"
+  "version" "9.12.0"
 
-"@vueuse/shared@9.3.0":
-  "integrity" "sha512-caGUWLY0DpPC6l31KxeUy6vPVNA0yKxx81jFYLoMpyP6cF84FG5Dkf69DfSUqL57wX8JcUkJDMnQaQIZPWFEQQ=="
-  "resolved" "https://registry.npmmirror.com/@vueuse/shared/-/shared-9.3.0.tgz"
-  "version" "9.3.0"
+"@vueuse/shared@9.12.0":
+  "integrity" "sha512-TWuJLACQ0BVithVTRbex4Wf1a1VaRuSpVeyEd4vMUWl54PzlE0ciFUshKCXnlLuD0lxIaLK4Ypj3NXYzZh4+SQ=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/shared/-/shared-9.12.0.tgz"
+  "version" "9.12.0"
   dependencies:
     "vue-demi" "*"
 

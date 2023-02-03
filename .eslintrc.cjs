@@ -14,5 +14,6 @@ module.exports = {
   },
   rules: {
     // "prefer-const": 0 / off,
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
 };
